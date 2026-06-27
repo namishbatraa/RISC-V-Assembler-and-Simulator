@@ -13,7 +13,9 @@ def is_number(string):
          
 
 # Opening data.json file
-with open("C:/Users/shash/OneDrive/Documents/data.json", 'r', encoding='utf-8') as file:
+import os
+script_dir = os.path.dirname(os.path.abspath(__file__))
+with open(os.path.join(script_dir, "data.json"), 'r', encoding='utf-8') as file:
     # Loading data into a variable "data"
     data = json.load(file)
     
