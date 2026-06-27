@@ -1,6 +1,7 @@
 # Importing json library
 import json
 import sys
+import os
 def is_number(string):
     if string and (string[0] == '-' or string[0].isdigit()): 
         try:
@@ -13,7 +14,6 @@ def is_number(string):
          
 
 # Opening data.json file
-import os
 script_dir = os.path.dirname(os.path.abspath(__file__))
 with open(os.path.join(script_dir, "data.json"), 'r', encoding='utf-8') as file:
     # Loading data into a variable "data"
